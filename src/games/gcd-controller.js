@@ -1,6 +1,6 @@
 import { getRandomInteger } from "../utils.js";
 
-const gcbController = () => {
+const gcdController = () => {
   let a = getRandomInteger(1, 99);
   let b = getRandomInteger(1, 99);
 
@@ -21,4 +21,4 @@ const gcbController = () => {
   return { expectedAnswer, question };
 };
 
-export { gcbController };
+export { gcdController };

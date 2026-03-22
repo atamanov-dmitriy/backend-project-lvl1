@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import runApp from "../src/cli.js";
-import { progressionController } from "../src/games/prime-controller.js";
+import { progressionController } from "../src/games/progression-controller.js";
 import { gameController } from "../src/index.js";
 
 const name = runApp();
