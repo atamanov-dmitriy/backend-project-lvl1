@@ -1,42 +1,42 @@
 const getRandomInteger = (min, max) => {
-  let rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-};
+  let rand = min + Math.random() * (max + 1 - min)
+  return Math.floor(rand)
+}
 
 const generateArithmeticProgression = (options) => {
-  const { start, step, count } = options;
+  const { start, step, count } = options
 
-  const progression = [];
+  const progression = []
   for (let i = 0; i < count; i++) {
-    const term = start + i * step;
-    progression.push(term);
+    const term = start + i * step
+    progression.push(term)
   }
 
-  return progression;
-};
+  return progression
+}
 
 const checkIsPrime = (number) => {
   if (number < 2) {
-    return false;
+    return false
   }
 
   if (number === 2) {
-    return true;
+    return true
   }
 
   if (number % 2 === 0) {
-    return false;
+    return false
   }
 
-  const limit = Math.sqrt(number);
+  const limit = Math.sqrt(number)
 
   for (let i = 3; i <= limit; i += 2) {
     if (number % i === 0) {
-      return false;
+      return false
     }
   }
 
-  return true;
-};
+  return true
+}
 
-export { getRandomInteger, generateArithmeticProgression, checkIsPrime };
+export { getRandomInteger, generateArithmeticProgression, checkIsPrime }

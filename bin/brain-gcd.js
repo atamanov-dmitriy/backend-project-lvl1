@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import runApp from "../src/cli.js";
-import { gcdController } from "../src/games/gcd-controller.js";
-import { gameController } from "../src/index.js";
+import runApp from '../src/cli.js'
+import { gcdController } from '../src/games/gcd-controller.js'
+import { gameController } from '../src/index.js'
 
-const name = runApp();
-console.log("Find the greatest common divisor of given numbers.");
-gameController(name, gcdController);
+const name = runApp()
+console.log('Find the greatest common divisor of given numbers.')
+gameController(name, gcdController)
