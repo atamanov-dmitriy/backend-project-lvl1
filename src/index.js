@@ -1,16 +1,11 @@
 import readlineSync from "readline-sync";
-import { getRandomInteger } from "./utils.js";
 
-const evenController = (userName) => {
+const gameController = (userName, controller) => {
   const MOVES_NUMBER = 3;
 
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
   for (let i = 0; i < MOVES_NUMBER; i++) {
-    const number = getRandomInteger(1, 99);
-    const expectedAnswer = number % 2 === 0 ? "yes" : "no";
-
-    console.log(`Question: ${number}`);
+    const { expectedAnswer, question } = controller();
+    console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question("Your answer: ").toLowerCase();
     if (userAnswer !== expectedAnswer) {
@@ -25,4 +20,4 @@ const evenController = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { evenController };
+export { gameController };
